@@ -1,5 +1,5 @@
 /*FUNCIONES GENERALES*/
-//Esta linea prueba git
+//Esta linea prueba git de nuevo
 
 Ext.onReady(function() {  //carga después de terminar de cargar el mapa. Se usa para cargar las busquedas por url
 	var mapa = Heron.App.map;
@@ -371,6 +371,7 @@ function zoomToGeometry (wkt){
 
 }
 
+//Esta linea prueba git de nuevo otra vez
 
 /*FUNCIONES PARA BAJAR KML*/
 		
