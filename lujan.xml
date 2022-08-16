@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="2236" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>WMS - DPOH</Title>
+    <Abstract>A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/publico/wms.xml"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Juan Mauro Alarcon</ContactPerson>
+        <ContactOrganization>Direccion provincial de obra hidraulica</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>Responsable sistemas SIG</ContactPosition>
+      <ContactAddress>
+        <AddressType>Work</AddressType>
+        <Address>Calle 7 #1267</Address>
+        <City>La Plata</City>
+        <StateOrProvince>Buenos Aires</StateOrProvince>
+        <PostCode>1900</PostCode>
+        <Country>Argentina</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>0221-4294912</ContactVoiceTelephone>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress>juanmauroalarcon@gmail.com</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/pdf</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+    </Exception>
+    <Layer>
+      <Title>WMS - DPOH</Title>
+      <Abstract>A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:22174</CRS>
+      <CRS>EPSG:22175</CRS>
+      <CRS>EPSG:22176</CRS>
+      <CRS>EPSG:22184</CRS>
+      <CRS>EPSG:22185</CRS>
+      <CRS>EPSG:22186</CRS>
+      <CRS>EPSG:22194</CRS>
+      <CRS>EPSG:22195</CRS>
+      <CRS>EPSG:22196</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-72.33593162801627</westBoundLongitude>
+        <eastBoundLongitude>57.448074515193156</eastBoundLongitude>
+        <southBoundLatitude>-77.87445220599994</southBoundLatitude>
+        <northBoundLatitude>50.3092170302897</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-72.33593162801627" miny="-77.87445220599994" maxx="57.448074515193156" maxy="50.3092170302897"/>
+      <BoundingBox CRS="EPSG:4326" minx="-77.87445220599994" miny="-72.33593162801627" maxx="50.3092170302897" maxy="57.448074515193156"/>
+      <BoundingBox CRS="EPSG:900913" minx="-8052399.074887823" miny="-1.4301807905242614E7" maxx="6395090.402085339" maxy="6499999.999999998"/>
+      <BoundingBox CRS="EPSG:22184" minx="-2.380943462002696E7" miny="3465295.61149272" maxx="4.112973922000741E7" maxy="4.861420066751146E7"/>
+      <BoundingBox CRS="EPSG:22185" minx="-1.9229935386226412E7" miny="4128361.913079072" maxx="3.787311893400167E7" maxy="4.557276186856863E7"/>
+      <BoundingBox CRS="EPSG:22186" minx="-1.5271722491110034E7" miny="4787661.453414642" maxx="3.498825052461356E7" maxy="4.2941446458606325E7"/>
+      <BoundingBox CRS="EPSG:22194" minx="-2.381029993714336E7" miny="3465355.1086796946" maxx="4.1129724895489074E7" maxy="4.861496186428445E7"/>
+      <BoundingBox CRS="EPSG:22195" minx="-1.9230681751391992E7" miny="4128408.1407110486" maxx="3.7873141767472915E7" maxy="4.557343237328725E7"/>
+      <BoundingBox CRS="EPSG:22196" minx="-1.5272363399074761E7" miny="4787694.407382345" maxx="3.498830611587409E7" maxy="4.294203695921222E7"/>
+      <BoundingBox CRS="EPSG:22174" minx="-2.3809434622203868E7" miny="3465295.611492877" maxx="4.112973922017471E7" maxy="4.861420066844826E7"/>
+      <BoundingBox CRS="EPSG:22175" minx="-1.9229935388133503E7" miny="4128361.9130791402" maxx="3.787311893419582E7" maxy="4.557276186941422E7"/>
+      <BoundingBox CRS="EPSG:22176" minx="-1.5271722492778137E7" miny="4787661.453414502" maxx="3.498825052482272E7" maxy="4.2941446459367454E7"/>
+      <BoundingBox CRS="EPSG:3857" minx="-8052399.074887823" miny="-1.4301807905242614E7" maxx="6395090.402085339" maxy="6499999.999999998"/>
+      <Layer queryable="1">
+        <Name>ARTEH</Name>
+        <Title>ARTEH</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>ARTEH</Keyword>
+        </KeywordList>
+        <CRS>EPSG:900913</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>49.5949677595327</westBoundLongitude>
+          <eastBoundLongitude>49.97968485889072</eastBoundLongitude>
+          <southBoundLatitude>48.31899871403385</southBoundLatitude>
+          <northBoundLatitude>48.404266382026776</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="49.5949677595327" miny="48.31899871403385" maxx="49.97968485889072" maxy="48.404266382026776"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6653829.772319553" miny="-4123846.598195905" maxx="-6601755.106832831" maxy="-4106184.1245955406"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.70487342727868" miny="-59.772369824041704" maxx="-34.574333104308806" maxy="-59.30457514482036"/>
+        <BoundingBox CRS="EPSG:22184" minx="6153890.7619512305" miny="4795753.888638988" maxx="6169857.25185326" maxy="4839170.560531057"/>
+        <BoundingBox CRS="EPSG:22185" minx="6159893.397943659" miny="5520854.295052184" maxx="6174571.356611209" maxy="5563811.626258246"/>
+        <BoundingBox CRS="EPSG:22186" minx="6156612.840893152" miny="6245576.191016136" maxx="6172180.537112624" maxy="6288846.796494374"/>
+        <BoundingBox CRS="EPSG:22194" minx="6154101.34192205" miny="4795822.954131239" maxx="6170067.839109016" maxy="4839239.604513353"/>
+        <BoundingBox CRS="EPSG:22195" minx="6160105.948569776" miny="5520912.724638857" maxx="6174783.894564542" maxy="5563870.013118868"/>
+        <BoundingBox CRS="EPSG:22196" minx="6156826.940012128" miny="6245624.037551056" maxx="6172394.6263039755" maxy="6288894.586537917"/>
+        <BoundingBox CRS="EPSG:22174" minx="6153890.758068306" miny="4795753.88851518" maxx="6169857.247990714" maxy="4839170.560390428"/>
+        <BoundingBox CRS="EPSG:22175" minx="6159893.39406354" miny="5520854.295043466" maxx="6174571.352750886" maxy="5563811.626231836"/>
+        <BoundingBox CRS="EPSG:22176" minx="6156612.8370114975" miny="6245576.191121539" maxx="6172180.533251174" maxy="6288846.796582704"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6653829.772319553" miny="-4123846.598195905" maxx="-6601755.106832831" maxy="-4106184.1245955406"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ARTEH"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_ManchaSituacionActual-Rec10</Name>
+        <Title>Lujan_ManchaSituacionActual-Rec10</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>ManchaSituacionActual-Rec10</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507723</westBoundLongitude>
+          <eastBoundLongitude>-58.82721294119068</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369107135</southBoundLatitude>
+          <northBoundLatitude>-34.22838801503532</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507723" miny="-34.75282369107135" maxx="-58.82721294119068" maxy="-34.22838801503532"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_ManchaSituacionActual-Rec10"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_ManchaSituacionActual-Rec100</Name>
+        <Title>Lujan_ManchaSituacionActual-Rec100</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>ManchaSituacionActual-Rec100</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507723</westBoundLongitude>
+          <eastBoundLongitude>-58.82721294119068</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369107135</southBoundLatitude>
+          <northBoundLatitude>-34.22838801503532</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507723" miny="-34.75282369107135" maxx="-58.82721294119068" maxy="-34.22838801503532"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_ManchaSituacionActual-Rec100"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_ManchaSituacionActual-Rec2</Name>
+        <Title>Lujan_ManchaSituacionActual-Rec2</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>ManchaSituacionActual-Rec2</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507723</westBoundLongitude>
+          <eastBoundLongitude>-58.82721294119068</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369107135</southBoundLatitude>
+          <northBoundLatitude>-34.22838801503532</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507723" miny="-34.75282369107135" maxx="-58.82721294119068" maxy="-34.22838801503532"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_ManchaSituacionActual-Rec2"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_ManchaSituacionActual-Rec25</Name>
+        <Title>Lujan_ManchaSituacionActual-Rec25</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>ManchaSituacionActual-Rec25</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507723</westBoundLongitude>
+          <eastBoundLongitude>-58.82721294119068</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369107135</southBoundLatitude>
+          <northBoundLatitude>-34.22838801503532</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507723" miny="-34.75282369107135" maxx="-58.82721294119068" maxy="-34.22838801503532"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_ManchaSituacionActual-Rec25"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_ManchaSituacionActual-Rec5</Name>
+        <Title>Lujan_ManchaSituacionActual-Rec5</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>ManchaSituacionActual-Rec5</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507723</westBoundLongitude>
+          <eastBoundLongitude>-58.82721294119068</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369107135</southBoundLatitude>
+          <northBoundLatitude>-34.22838801503532</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507723" miny="-34.75282369107135" maxx="-58.82721294119068" maxy="-34.22838801503532"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_ManchaSituacionActual-Rec5"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_ManchaSituacionActual-Rec50</Name>
+        <Title>Lujan_ManchaSituacionActual-Rec50</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>ManchaSituacionActual-Rec50</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507723</westBoundLongitude>
+          <eastBoundLongitude>-58.82721294119068</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369107135</southBoundLatitude>
+          <northBoundLatitude>-34.22838801503532</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507723" miny="-34.75282369107135" maxx="-58.82721294119068" maxy="-34.22838801503532"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_ManchaSituacionActual-Rec50"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_Ribera_provisoria_ADA</Name>
+        <Title>Lujan_Ribera_provisoria_ADA</Title>
+        <Abstract>Linea de rivera determinada por la Autoridad del Agua. De caracter provisorio</Abstract>
+        <KeywordList>
+          <Keyword>Ribera_provisoria_ADA</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:900913</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.637592223429046</westBoundLongitude>
+          <eastBoundLongitude>-58.85899026644864</eastBoundLongitude>
+          <southBoundLatitude>-34.73773837959474</southBoundLatitude>
+          <northBoundLatitude>-34.28068670717081</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.637592223429046" miny="-34.73773837959474" maxx="-58.85899026644864" maxy="-34.28068670717081"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6638826.398449013" miny="-4128297.706743968" maxx="-6552152.825067309" maxy="-4066553.951528083"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.73773837959474" miny="-59.637592223429046" maxx="-34.28068670717081" maxy="-58.85899026644864"/>
+        <BoundingBox CRS="EPSG:22184" minx="6148648.243524197" miny="4807986.653191313" maxx="6202047.58542187" maxy="4881425.6448850855"/>
+        <BoundingBox CRS="EPSG:22185" minx="6155874.725282964" miny="5533188.831239723" maxx="6207109.691034601" maxy="5605066.521914101"/>
+        <BoundingBox CRS="EPSG:22186" minx="6153297.86194088" miny="6257099.393969312" maxx="6205604.603566036" maxy="6329745.937053997"/>
+        <BoundingBox CRS="EPSG:22194" minx="6148858.808297307" miny="4808055.709486583" maxx="6202258.148555968" maxy="4881494.678054388"/>
+        <BoundingBox CRS="EPSG:22195" minx="6156087.275844787" miny="5533247.248090226" maxx="6207322.196506694" maxy="5605124.871540835"/>
+        <BoundingBox CRS="EPSG:22196" minx="6153511.969378712" miny="6257147.214910263" maxx="6205818.656616402" maxy="6329793.670679049"/>
+        <BoundingBox CRS="EPSG:22174" minx="6148648.2396356035" miny="4807986.653062045" maxx="6202047.581604025" maxy="4881425.644730432"/>
+        <BoundingBox CRS="EPSG:22175" minx="6155874.721397738" miny="5533188.831225813" maxx="6207109.687219189" maxy="5605066.521871595"/>
+        <BoundingBox CRS="EPSG:22176" minx="6153297.858054451" miny="6257099.394067658" maxx="6205604.599749899" maxy="6329745.937125379"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6638826.398449013" miny="-4128297.706743968" maxx="-6552152.825067309" maxy="-4066553.951528083"/>
+        <Style>
+          <Name>line_purple</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_Ribera_provisoria_ADA"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_mancha_con_obra_rec10</Name>
+        <Title>Lujan_mancha_con_obra_rec10</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>Mancha_Sit_puent_amp_cauc_med_ArtehRec10</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507827</westBoundLongitude>
+          <eastBoundLongitude>-58.827212941194006</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369039496</southBoundLatitude>
+          <northBoundLatitude>-34.2283880143561</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507827" miny="-34.75282369039496" maxx="-58.827212941194006" maxy="-34.2283880143561"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_mancha_con_obra_rec10"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_mancha_con_obra_rec100</Name>
+        <Title>Lujan_mancha_con_obra_rec100</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>ManchaSit_Ampl_Puent+Ampl_medARTEH_R100</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507723</westBoundLongitude>
+          <eastBoundLongitude>-58.82721294119068</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369107135</southBoundLatitude>
+          <northBoundLatitude>-34.22838801503532</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507723" miny="-34.75282369107135" maxx="-58.82721294119068" maxy="-34.22838801503532"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_mancha_con_obra_rec100"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_mancha_con_obra_rec2</Name>
+        <Title>Lujan_mancha_con_obra_rec2</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>Mancha_Sit_puent_amp_cauc_med_ArtehRec2</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507827</westBoundLongitude>
+          <eastBoundLongitude>-58.827212941194006</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369039496</southBoundLatitude>
+          <northBoundLatitude>-34.2283880143561</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507827" miny="-34.75282369039496" maxx="-58.827212941194006" maxy="-34.2283880143561"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_mancha_con_obra_rec2"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_mancha_con_obra_rec25</Name>
+        <Title>Lujan_mancha_con_obra_rec25</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>Mancha_Sit_Ampl_ Puent+Ampl_medARTEH_R25</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507827</westBoundLongitude>
+          <eastBoundLongitude>-58.827212941194006</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369039496</southBoundLatitude>
+          <northBoundLatitude>-34.2283880143561</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507827" miny="-34.75282369039496" maxx="-58.827212941194006" maxy="-34.2283880143561"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_mancha_con_obra_rec25"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_mancha_con_obra_rec5</Name>
+        <Title>Lujan_mancha_con_obra_rec5</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>Mancha_Sit_puent_amp_cauc_med_ArtehRec5</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507827</westBoundLongitude>
+          <eastBoundLongitude>-58.827212941194006</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369039496</southBoundLatitude>
+          <northBoundLatitude>-34.2283880143561</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507827" miny="-34.75282369039496" maxx="-58.827212941194006" maxy="-34.2283880143561"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_mancha_con_obra_rec5"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Lujan_mancha_con_obra_rec50</Name>
+        <Title>Lujan_mancha_con_obra_rec50</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>Mancha_Sit_Ampl_ Puent+Ampl_medARTEH_R50</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.62996682507723</westBoundLongitude>
+          <eastBoundLongitude>-58.82721294119068</eastBoundLongitude>
+          <southBoundLatitude>-34.75282369107135</southBoundLatitude>
+          <northBoundLatitude>-34.22838801503532</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.62996682507723" miny="-34.75282369107135" maxx="-58.82721294119068" maxy="-34.22838801503532"/>
+        <BoundingBox CRS="EPSG:5347" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.75282372475866" miny="-59.62996682507827" maxx="-34.228388047999594" maxy="-58.827212941194006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <BoundingBox CRS="EPSG:22184" minx="6147416.42354451" miny="4808840.085094401" maxx="6207276.460855625" maxy="4883924.509177191"/>
+        <BoundingBox CRS="EPSG:22185" minx="6154731.005875036" miny="5534091.754600177" maxx="6212356.005875367" maxy="5607391.754600602"/>
+        <BoundingBox CRS="EPSG:22186" minx="6151647.566009648" miny="6257666.043419673" maxx="6211448.064451774" maxy="6332676.775281927"/>
+        <BoundingBox CRS="EPSG:22194" minx="6147626.360833462" miny="4808910.947357681" maxx="6207486.574383368" maxy="4883995.576330787"/>
+        <BoundingBox CRS="EPSG:22195" minx="6154942.992145601" miny="5534151.993221777" maxx="6212568.11404788" maxy="5607452.144403423"/>
+        <BoundingBox CRS="EPSG:22196" minx="6151861.165328059" miny="6257715.696903778" maxx="6211661.778128234" maxy="6332726.562962871"/>
+        <BoundingBox CRS="EPSG:22174" minx="6147416.423469338" miny="4808840.085092754" maxx="6207276.460780196" maxy="4883924.509175197"/>
+        <BoundingBox CRS="EPSG:22175" minx="6154731.0058" miny="5534091.7546" maxx="6212356.0058" maxy="5607391.7546"/>
+        <BoundingBox CRS="EPSG:22176" minx="6151647.565934559" miny="6257666.04342093" maxx="6211448.0643764045" maxy="6332676.775282817"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6637977.54298751" miny="-4130341.403296818" maxx="-6548615.389401189" maxy="-4059510.3431916265"/>
+        <Style>
+          <Name>manchas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Lujan_mancha_con_obra_rec50"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>10.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>MDE_PALSAR_LUJAN</Name>
+        <Title>MDE_PALSAR_LUJAN</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>MDE_PALSAR_LUJAN</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.37531033181708</westBoundLongitude>
+          <eastBoundLongitude>-57.85982436721087</eastBoundLongitude>
+          <southBoundLatitude>-35.32617118015799</southBoundLatitude>
+          <northBoundLatitude>-34.09493048069237</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.37531033181708" miny="-35.32617118015799" maxx="-57.85982436721087" maxy="-34.09493048069237"/>
+        <BoundingBox CRS="EPSG:5347" minx="6091185.343954239" miny="5465874.794380574" maxx="6225765.343954239" maxy="5694654.794380574"/>
+        <BoundingBox CRS="EPSG:4326" minx="-35.326171215280716" miny="-60.37531033181708" maxx="-34.0949305141488" maxy="-57.85982436721087"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6720948.802623746" miny="-4208295.328434304" maxx="-6440926.185946156" maxy="-4041556.0086564897"/>
+        <BoundingBox CRS="EPSG:22184" minx="6081143.01682971" miny="4738678.021500785" maxx="6222701.816639228" maxy="4971717.762417829"/>
+        <BoundingBox CRS="EPSG:22185" minx="6091185.34402893" miny="5465874.794380385" maxx="6225765.344030124" maxy="5694654.79438238"/>
+        <BoundingBox CRS="EPSG:22186" minx="6086018.392567713" miny="6189019.359645716" maxx="6227416.023840004" maxy="6421801.740371827"/>
+        <BoundingBox CRS="EPSG:22194" minx="6081352.755270527" miny="4738748.698786008" maxx="6222911.992953766" maxy="4971789.048398518"/>
+        <BoundingBox CRS="EPSG:22195" minx="6091397.192105485" miny="5465934.89641791" maxx="6225977.480413486" maxy="5694715.36416745"/>
+        <BoundingBox CRS="EPSG:22196" minx="6086231.870092069" miny="6189068.896927557" maxx="6227629.777591706" maxy="6421851.674481184"/>
+        <BoundingBox CRS="EPSG:22174" minx="6081143.016754808" miny="4738678.021499476" maxx="6222701.816563765" maxy="4971717.762415393"/>
+        <BoundingBox CRS="EPSG:22175" minx="6091185.343954239" miny="5465874.794380574" maxx="6225765.343954239" maxy="5694654.794380574"/>
+        <BoundingBox CRS="EPSG:22176" minx="6086018.392492936" miny="6189019.359647321" maxx="6227416.023764579" maxy="6421801.740372255"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6720948.802623746" miny="-4208295.328434304" maxx="-6440926.185946156" maxy="-4041556.0086564897"/>
+        <Style>
+          <Name>dem</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=MDE_PALSAR_LUJAN"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>100.0</MinScaleDenominator>
+        <MaxScaleDenominator>5000000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>cuenca_lujan</Name>
+        <Title>cuenca_lujan</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>cuenca_lujan</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:900913</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.882069888366495</westBoundLongitude>
+          <eastBoundLongitude>-53.89891704717129</eastBoundLongitude>
+          <southBoundLatitude>-40.91627447067578</southBoundLatitude>
+          <northBoundLatitude>-33.78523007002315</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.882069888366495" miny="-40.91627447067578" maxx="-53.89891704717129" maxy="-33.78523007002315"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7000000.0" miny="-5000000.0" maxx="-6000000.0" maxy="-4000000.0"/>
+        <BoundingBox CRS="EPSG:4326" minx="-40.91627447067578" miny="-62.882069888366495" maxx="-33.78523007002315" maxy="-53.89891704717129"/>
+        <BoundingBox CRS="EPSG:22184" minx="5430603.373841299" miny="4509934.617714752" maxx="6262120.413428366" maxy="5344269.249292671"/>
+        <BoundingBox CRS="EPSG:22185" minx="5452726.422345352" miny="5233029.079005784" maxx="6262120.994554442" maxy="6065471.828375943"/>
+        <BoundingBox CRS="EPSG:22186" minx="5453995.714671833" miny="5954854.962126606" maxx="6262121.5473327935" maxy="6787265.809567446"/>
+        <BoundingBox CRS="EPSG:22194" minx="5430814.521925258" miny="4510003.848774842" maxx="6262331.00891643" maxy="5344338.006702747"/>
+        <BoundingBox CRS="EPSG:22195" minx="5452939.869703527" miny="5233087.771569496" maxx="6262333.449508745" maxy="6065529.744826296"/>
+        <BoundingBox CRS="EPSG:22196" minx="5454210.994848958" miny="5954903.171293858" maxx="6262335.545082509" maxy="6787312.943152107"/>
+        <BoundingBox CRS="EPSG:22174" minx="5430603.369254471" miny="4509934.617708606" maxx="6262120.409690595" maxy="5344269.248960523"/>
+        <BoundingBox CRS="EPSG:22175" minx="5452726.417763047" miny="5233029.0791097125" maxx="6262120.990816671" maxy="6065471.82815491"/>
+        <BoundingBox CRS="EPSG:22176" minx="5453995.710089795" miny="5954854.9623396145" maxx="6262121.543595023" maxy="6787265.809455596"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7000000.0" miny="-5000000.0" maxx="-6000000.0" maxy="-4000000.0"/>
+        <Style>
+          <Name>polygon_red2</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=cuenca_lujan"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>lujan_Cursos_agua_IGN</Name>
+        <Title>lujan_Cursos_agua_IGN</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Cursos_agua_IGN</Keyword>
+        </KeywordList>
+        <CRS>EPSG:900913</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>48.67019992987658</westBoundLongitude>
+          <eastBoundLongitude>51.65884575575089</eastBoundLongitude>
+          <southBoundLatitude>47.133348283518444</southBoundLatitude>
+          <northBoundLatitude>49.30281711396007</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="48.67019992987658" miny="47.133348283518444" maxx="51.65884575575089" maxy="49.30281711396007"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6781088.575247942" miny="-4365938.660161118" maxx="-6368019.5803311765" maxy="-3918785.0968638784"/>
+        <BoundingBox CRS="EPSG:4326" minx="-36.473263697960405" miny="-60.915555101134956" maxx="-33.17672713306897" maxy="-57.20489318583876"/>
+        <BoundingBox CRS="EPSG:22184" minx="5948255.968637529" miny="4686824.091027957" maxx="6327681.724826996" maxy="5040861.1656558"/>
+        <BoundingBox CRS="EPSG:22185" minx="5960273.800868048" miny="5414607.948181705" maxx="6329578.26438387" maxy="5760731.514953762"/>
+        <BoundingBox CRS="EPSG:22186" minx="5956772.144992838" miny="6134695.1713005295" maxx="6329598.883343225" maxy="6481637.073485164"/>
+        <BoundingBox CRS="EPSG:22194" minx="5948466.6165958" miny="4686893.179590827" maxx="6327892.267357545" maxy="5040930.186272191"/>
+        <BoundingBox CRS="EPSG:22195" minx="5960486.5475188475" miny="5414666.467837377" maxx="6329790.661532163" maxy="5760789.753454764"/>
+        <BoundingBox CRS="EPSG:22196" minx="5956986.517307599" miny="6134743.103888706" maxx="6329812.798967014" maxy="6481684.600243077"/>
+        <BoundingBox CRS="EPSG:22174" minx="5948255.964501964" miny="4686824.090939119" maxx="6327681.721186486" maxy="5040861.165454808"/>
+        <BoundingBox CRS="EPSG:22175" minx="5960273.796737352" miny="5414607.9482132895" maxx="6329578.260744328" maxy="5760731.514857228"/>
+        <BoundingBox CRS="EPSG:22176" minx="5956772.140860717" miny="6134695.171435927" maxx="6329598.879703694" maxy="6481637.073493891"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6781088.575247942" miny="-4365938.660161118" maxx="-6368019.5803311765" maxy="-3918785.0968638784"/>
+        <Style>
+          <Name>line</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=lujan_Cursos_agua_IGN"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>lujan_Cursos_cuenca_baja</Name>
+        <Title>lujan_Cursos_cuenca_baja</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>Cursos_cuenca_baja</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:900913</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>50.29453978521148</westBoundLongitude>
+          <eastBoundLongitude>50.5616173761738</eastBoundLongitude>
+          <southBoundLatitude>48.417039702693856</southBoundLatitude>
+          <northBoundLatitude>48.6569760879891</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="50.29453978521148" miny="48.417039702693856" maxx="50.5616173761738" maxy="48.6569760879891"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6559903.269371653" miny="-4103199.788893366" maxx="-6523336.520857012" maxy="-4053728.9580379506"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.552256104710885" miny="-58.928613692221745" maxx="-34.18543708755653" maxy="-58.60012900140917"/>
+        <BoundingBox CRS="EPSG:22184" minx="6168236.455592919" miny="4873795.588684215" maxx="6210232.514622134" maxy="4905743.75772258"/>
+        <BoundingBox CRS="EPSG:22185" minx="6176153.623263191" miny="5598336.722674546" maxx="6217215.967333248" maxy="5629049.853425836"/>
+        <BoundingBox CRS="EPSG:22186" minx="6175353.795273359" miny="6322201.061045877" maxx="6216577.307999522" maxy="6353129.072720875"/>
+        <BoundingBox CRS="EPSG:22194" minx="6168446.995508565" miny="4873864.611859873" maxx="6210443.043733394" maxy="4905812.781742917"/>
+        <BoundingBox CRS="EPSG:22195" minx="6176366.14970128" miny="5598395.075118631" maxx="6217428.457669612" maxy="5629108.181542976"/>
+        <BoundingBox CRS="EPSG:22196" minx="6175567.888093782" miny="6322248.792126297" maxx="6216791.351069503" maxy="6353176.770116894"/>
+        <BoundingBox CRS="EPSG:22174" minx="6168236.451731804" miny="4873795.58852943" maxx="6210232.510817875" maxy="4905743.7575592445"/>
+        <BoundingBox CRS="EPSG:22175" minx="6176153.619405809" miny="5598336.722633913" maxx="6217215.963532358" maxy="5629049.853374013"/>
+        <BoundingBox CRS="EPSG:22176" minx="6175353.791415598" miny="6322201.061117294" maxx="6216577.304198325" maxy="6353129.072781574"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6559903.269371653" miny="-4103199.788893366" maxx="-6523336.520857012" maxy="-4053728.9580379506"/>
+        <Style>
+          <Name>Hidro</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=lujan_Cursos_cuenca_baja"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>lujan_parques_industriales</Name>
+        <Title>lujan_parques_industriales</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>lujan_parques_industriales</Keyword>
+        </KeywordList>
+        <CRS>EPSG:900913</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>50.08582338517936</westBoundLongitude>
+          <eastBoundLongitude>50.75728921265795</eastBoundLongitude>
+          <southBoundLatitude>48.20363520321751</southBoundLatitude>
+          <northBoundLatitude>48.54217473286788</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="50.08582338517936" miny="48.20363520321751" maxx="50.75728921265795" maxy="48.54217473286788"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6587769.757844274" miny="-4147065.254265517" maxx="-6496221.343707481" maxy="-4076794.4205204635"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.87616561818296" miny="-59.178942617318704" maxx="-34.3566639803466" maxy="-58.35654922075886"/>
+        <BoundingBox CRS="EPSG:22184" minx="6131257.84321677" miny="4849432.346654264" maxx="6192118.457292941" maxy="4927353.978931037"/>
+        <BoundingBox CRS="EPSG:22185" minx="6139878.501225467" miny="5575066.4678282" maxx="6198435.671227484" maxy="5651199.934068169"/>
+        <BoundingBox CRS="EPSG:22186" minx="6138944.166846251" miny="6299526.390490956" maxx="6197907.247729334" maxy="6375972.782211954"/>
+        <BoundingBox CRS="EPSG:22194" minx="6131468.396539731" miny="4849501.369278186" maxx="6192329.008149256" maxy="4927422.979340365"/>
+        <BoundingBox CRS="EPSG:22195" minx="6140091.061381222" miny="5575124.840306987" maxx="6198648.182250064" maxy="5651258.237361032"/>
+        <BoundingBox CRS="EPSG:22196" minx="6139158.305579023" miny="6299574.156304577" maxx="6198121.319411912" maxy="6376020.453643049"/>
+        <BoundingBox CRS="EPSG:22174" minx="6131257.83930661" miny="4849432.34650598" maxx="6192118.453462689" maxy="4927353.97875662"/>
+        <BoundingBox CRS="EPSG:22175" minx="6139878.497319282" miny="5575066.467796406" maxx="6198435.667400249" maxy="5651199.934006622"/>
+        <BoundingBox CRS="EPSG:22176" minx="6138944.162939633" miny="6299526.390572583" maxx="6197907.243901847" maxy="6375972.782264493"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6587769.757844274" miny="-4147065.254265517" maxx="-6496221.343707481" maxy="-4076794.4205204635"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=lujan_parques_industriales"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>lujan_puentes_proyectados</Name>
+        <Title>lujan_puentes_proyectados</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>puentes_proyectados</Keyword>
+        </KeywordList>
+        <CRS>EPSG:900913</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>49.8672614167466</westBoundLongitude>
+          <eastBoundLongitude>50.33233229305354</eastBoundLongitude>
+          <southBoundLatitude>48.36423715504095</southBoundLatitude>
+          <northBoundLatitude>48.58765220995359</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="49.8672614167466" miny="48.36423715504095" maxx="50.33233229305354" maxy="48.58765220995359"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6617261.81502191" miny="-4114458.4325383347" maxx="-6554165.776159064" maxy="-4068279.6747860955"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.63551268200273" miny="-59.44387427454667" maxx="-34.29349521083231" maxy="-58.877072913767734"/>
+        <BoundingBox CRS="EPSG:22184" minx="6160067.281107492" miny="4826139.820006741" maxx="6200018.018855754" maxy="4879701.25338784"/>
+        <BoundingBox CRS="EPSG:22185" minx="6167234.537678542" miny="5550992.074778292" maxx="6205608.31383075" maxy="5603385.665316866"/>
+        <BoundingBox CRS="EPSG:22186" minx="6165090.639282235" miny="6274977.542874824" maxx="6204152.91300091" maxy="6327878.098322666"/>
+        <BoundingBox CRS="EPSG:22194" minx="6160277.8391146595" miny="4826208.869317492" maxx="6200228.5757709" maxy="4879770.286891317"/>
+        <BoundingBox CRS="EPSG:22195" minx="6167447.076793544" miny="5551050.474081746" maxx="6205820.819808193" maxy="5603444.016384709"/>
+        <BoundingBox CRS="EPSG:22196" minx="6165304.735030178" miny="6275025.340059497" maxx="6204366.967650328" maxy="6327925.832243556"/>
+        <BoundingBox CRS="EPSG:22174" minx="6160067.2772342935" miny="4826139.819870895" maxx="6200018.015035641" maxy="4879701.253233735"/>
+        <BoundingBox CRS="EPSG:22175" minx="6167234.533808706" miny="5550992.074757089" maxx="6205608.310013319" maxy="5603385.665274998"/>
+        <BoundingBox CRS="EPSG:22176" minx="6165090.635411389" miny="6274977.542966012" maxx="6204152.9091827795" maxy="6327878.098394269"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6617261.81502191" miny="-4114458.4325383347" maxx="-6554165.776159064" maxy="-4068279.6747860955"/>
+        <Style>
+          <Name>point_green</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=lujan_puentes_proyectados"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>lujan_urbanizaciones-industrias-asentamientos</Name>
+        <Title>lujan_urbanizaciones-industrias-asentamientos</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>lujan_urbanizaciones-industrias-asentamientos</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:900913</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.70660677506273</westBoundLongitude>
+          <eastBoundLongitude>-57.483301579116315</eastBoundLongitude>
+          <southBoundLatitude>-35.60195758145908</southBoundLatitude>
+          <northBoundLatitude>-33.67277959987525</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.70660677506273" miny="-35.60195758145908" maxx="-57.483301579116315" maxy="-33.67277959987525"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6646509.063194201" miny="-4245988.671058388" maxx="-6399011.8609034065" maxy="-3984948.4943977855"/>
+        <BoundingBox CRS="EPSG:4326" minx="-35.60195758145908" miny="-59.70660677506273" maxx="-33.67277959987525" maxy="-57.483301579116315"/>
+        <BoundingBox CRS="EPSG:22184" minx="6046545.494688183" miny="4798482.883919279" maxx="6269728.22720012" maxy="5011911.434755231"/>
+        <BoundingBox CRS="EPSG:22185" minx="6057670.874632883" miny="5526585.746509746" maxx="6274560.764267242" maxy="5733421.499955771"/>
+        <BoundingBox CRS="EPSG:22186" minx="6057213.7641410865" miny="6248959.765993278" maxx="6274494.577644912" maxy="6456205.653495923"/>
+        <BoundingBox CRS="EPSG:22194" minx="6046756.068357801" miny="4798551.910794817" maxx="6269938.756783683" maxy="5011980.431501789"/>
+        <BoundingBox CRS="EPSG:22195" minx="6057883.50850455" miny="5526644.167086874" maxx="6274773.207784607" maxy="5733479.744340189"/>
+        <BoundingBox CRS="EPSG:22196" minx="6057428.011333771" miny="6249007.577013973" maxx="6274708.55873157" maxy="6456253.216294902"/>
+        <BoundingBox CRS="EPSG:22174" minx="6046545.490671332" miny="4798482.883785688" maxx="6269728.223477849" maxy="5011911.434557139"/>
+        <BoundingBox CRS="EPSG:22175" minx="6057670.870620886" miny="5526585.746497864" maxx="6274560.760547373" maxy="5733421.499865753"/>
+        <BoundingBox CRS="EPSG:22176" minx="6057213.76012889" miny="6248959.766090103" maxx="6274494.573925011" maxy="6456205.653515495"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6646509.063194201" miny="-4245988.671058388" maxx="-6399011.8609034065" maxy="-3984948.4943977855"/>
+        <Style>
+          <Name>urbanizaciones</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dipsoh/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=lujan_urbanizaciones-industrias-asentamientos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

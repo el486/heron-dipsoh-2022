@@ -1,0 +1,38 @@
+<?php
+  // Se prendio esta mrd :v
+  session_start();
+
+  // Validamos que exista una session y ademas que el cargo que exista sea igual a 1 (Administrador)
+  if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 1){
+    /*
+      Para redireccionar en php se utiliza header,
+      pero al ser datos enviados por cabereza debe ejecutarse
+      antes de mostrar cualquier informacion en el DOM es por eso que inserto este
+      codigo antes de la estructura del html, espero haber sido claro
+    */
+    header('localhost/apps/visor/index.php');
+  }
+
+?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+ 
+<body leftmargin=0 topmargin=0 bgcolor="#8d8d8d">
+
+<TABLE cellSpacing=0 cellPadding=0  width="100%" height="70px" align="center" border=0 topmargin="0" leftmargin="0" bgcolor="#8d8d8d" 
+ style="padding: 0 ; background-image:url(images/encabezado_light.gif); background-repeat: no-repeat;  background-position: top;  background-attachment: fixed; background-size: 100% auto;">
+  <TBODY>
+  <TR>
+    <TD width="100px"></TD>
+    <TD width="140px" style="align:left"><a href="http://www.mosp.gba.gov.ar/sig_hidraulica/" target="_blank" ><img height="50px" src="./images/dpoh_trans.png" alt="Sig DiPSOH"></a></TD>
+	<TD style="align:right"><img height="30px" src="./images/minis_trans.png" alt="Sig DiPSOH" align="right"></TD> 
+    <TD width="3%"></TD>
+  </TR> 
+</TBODY>
+</TABLE>
+ 
+</body>
+
+</html>

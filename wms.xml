@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="2211" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>WMS - DPOHidraulica BsAs</Title>
+    <Abstract>A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/publico/"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Juan Mauro Alarcon</ContactPerson>
+        <ContactOrganization>Direccion provincial de obra hidraulica</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>Responsable sistemas SIG</ContactPosition>
+      <ContactAddress>
+        <AddressType>Work</AddressType>
+        <Address>Calle 7 #1267</Address>
+        <City>La Plata</City>
+        <StateOrProvince>Buenos Aires</StateOrProvince>
+        <PostCode>1900</PostCode>
+        <Country>Argentina</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress>juanmauroalarcon@gmail.com</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/pdf</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+    </Exception>
+    <Layer>
+      <Title>WMS - DPOHidraulica BsAs</Title>
+      <Abstract>A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:22174</CRS>
+      <CRS>EPSG:22175</CRS>
+      <CRS>EPSG:22176</CRS>
+      <CRS>EPSG:22184</CRS>
+      <CRS>EPSG:22185</CRS>
+      <CRS>EPSG:22186</CRS>
+      <CRS>EPSG:22194</CRS>
+      <CRS>EPSG:22195</CRS>
+      <CRS>EPSG:22196</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-66.17392988762619</westBoundLongitude>
+        <eastBoundLongitude>-55.173083947409765</eastBoundLongitude>
+        <southBoundLatitude>-41.14975791177379</southBoundLatitude>
+        <northBoundLatitude>-31.965626022324553</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-66.17392988762619" miny="-41.14975791177379" maxx="-55.173083947409765" maxy="-31.965626022324553"/>
+      <BoundingBox CRS="EPSG:4326" minx="-41.14975791177379" miny="-66.17392988762619" maxx="-31.965626022324553" maxy="-55.173083947409765"/>
+      <BoundingBox CRS="EPSG:900913" minx="-7366448.178880335" miny="-5034456.079607093" maxx="-6141839.610520191" maxy="-3758799.353700868"/>
+      <BoundingBox CRS="EPSG:22184" minx="5415119.481050846" miny="4199905.611759481" maxx="6463818.751055195" maxy="5240882.785688272"/>
+      <BoundingBox CRS="EPSG:22185" minx="5426343.743096144" miny="4915888.814269615" maxx="6463726.797021743" maxy="5956519.42216247"/>
+      <BoundingBox CRS="EPSG:22186" minx="5403981.614008136" miny="5631166.809904884" maxx="6463924.886648075" maxy="6672708.371312262"/>
+      <BoundingBox CRS="EPSG:22194" minx="5415330.7209434705" miny="4199974.916336518" maxx="6464029.285762884" maxy="5240951.83590742"/>
+      <BoundingBox CRS="EPSG:22195" minx="5426557.244330471" miny="4915947.664432153" maxx="6463939.100907616" maxy="5956577.57671271"/>
+      <BoundingBox CRS="EPSG:22196" minx="5404196.894731046" miny="5631215.280424539" maxx="6464138.662132372" maxy="6672755.698923924"/>
+      <BoundingBox CRS="EPSG:22174" minx="5415119.480979888" miny="4199905.61176086" maxx="6463818.750978618" maxy="5240882.785684848"/>
+      <BoundingBox CRS="EPSG:22175" minx="5426343.743025315" miny="4915888.814272308" maxx="6463726.796945166" maxy="5956519.422160369"/>
+      <BoundingBox CRS="EPSG:22176" minx="5403981.613937049" miny="5631166.809908909" maxx="6463924.8865715" maxy="6672708.371311469"/>
+      <BoundingBox CRS="EPSG:3857" minx="-7366448.178880335" miny="-5034456.079607093" maxx="-6141839.610520191" maxy="-3758799.353700868"/>
+      <Layer queryable="1">
+        <Name>Cuencas_BuenosAires</Name>
+        <Title>Cuencas Hidricas Provincia de Buenos Aires</Title>
+        <Abstract>Cuencas hídricas de la provincia de Buenos Aires, digitalizadas en distintas escalas segun tamaño de la cuenca (provisorias, trabajo en progreso)</Abstract>
+        <KeywordList>
+          <Keyword>cuencas</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-63.69934205154268</westBoundLongitude>
+          <eastBoundLongitude>-56.46466221104538</eastBoundLongitude>
+          <southBoundLatitude>-41.06740132233527</southBoundLatitude>
+          <northBoundLatitude>-33.22490390800257</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-63.69934205154268" miny="-41.06740132233527" maxx="-56.46466221104538" maxy="-33.22490390800257"/>
+        <BoundingBox CRS="EPSG:4326" minx="-41.067401383565986" miny="-63.69934208755092" maxx="-33.224903953090156" maxy="-56.464662234735094"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7090978.325052707" miny="-5022288.441526469" maxx="-6285617.447784895" maxy="-3925194.3918519844"/>
+        <BoundingBox CRS="EPSG:22184" minx="5433272.79907953" miny="4434809.899610926" maxx="6324160.065634631" maxy="5109725.144435156"/>
+        <BoundingBox CRS="EPSG:22185" minx="5447307.455194154" miny="5155067.914314434" maxx="6324271.387670438" maxy="5829632.094765363"/>
+        <BoundingBox CRS="EPSG:22186" minx="5432221.261614309" miny="5874946.196338267" maxx="6324146.64580052" maxy="6549902.013269557"/>
+        <BoundingBox CRS="EPSG:22194" minx="5433484.055345866" miny="4434879.1680998625" maxx="6324370.633912837" maxy="5109794.124012275"/>
+        <BoundingBox CRS="EPSG:22195" minx="5447520.973838337" miny="5155126.652305007" maxx="6324483.789585649" maxy="5829690.272603098"/>
+        <BoundingBox CRS="EPSG:22196" minx="5432436.564420128" miny="5874994.470387579" maxx="6324360.566460413" maxy="6549949.452091329"/>
+        <BoundingBox CRS="EPSG:22174" minx="5433272.794486654" miny="4434809.899635134" maxx="6324160.061987162" maxy="5109725.14420736"/>
+        <BoundingBox CRS="EPSG:22175" minx="5447307.450604141" miny="5155067.914442766" maxx="6324271.384023026" maxy="5829632.0946427435"/>
+        <BoundingBox CRS="EPSG:22176" minx="5432221.257021221" miny="5874946.196571861" maxx="6324146.642153043" maxy="6549902.013251026"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7090978.325052707" miny="-5022288.441526469" maxx="-6285617.447784895" maxy="-3925194.3918519844"/>
+        <Style>
+          <Name>paletaCuencas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Cuencas_BuenosAires"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>CurvasAreaMetropolitana</Name>
+        <Title>Curvas de nivel area metropolitana</Title>
+        <Abstract>Curvas de nivel del area metropolitana digitalizadas sobre las cartas 1:50.000 del IGN</Abstract>
+        <KeywordList>
+          <Keyword>curvas_area_metropolitana_22195</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.352879935135284</westBoundLongitude>
+          <eastBoundLongitude>-57.74404419677528</eastBoundLongitude>
+          <southBoundLatitude>-35.17235500655134</southBoundLatitude>
+          <northBoundLatitude>-34.24798034328499</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.352879935135284" miny="-35.17235500655134" maxx="-57.74404419677528" maxy="-34.24798034328499"/>
+        <BoundingBox CRS="EPSG:4326" minx="-35.172355056939566" miny="-59.35287995919285" maxx="-34.24798039209407" maxy="-57.74404421893637"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6607132.37417164" miny="-4187328.245672608" maxx="-6428037.598796268" maxy="-4062148.5366096133"/>
+        <BoundingBox CRS="EPSG:22184" minx="6095574.057142223" miny="4832315.345596166" maxx="6204773.303370028" maxy="4984405.418848648"/>
+        <BoundingBox CRS="EPSG:22185" minx="6105919.910464423" miny="5558950.691207664" maxx="6210607.7022352405" maxy="5707828.2558467705"/>
+        <BoundingBox CRS="EPSG:22186" minx="6105715.181909766" miny="6283240.859908867" maxx="6210546.698084138" maxy="6432219.649954731"/>
+        <BoundingBox CRS="EPSG:22194" minx="6095784.605288335" miny="4832384.366059208" maxx="6204983.853876089" maxy="4984474.390080345"/>
+        <BoundingBox CRS="EPSG:22195" minx="6106132.495435978" miny="5559009.078204312" maxx="6210820.20280656" maxy="5707886.50632037"/>
+        <BoundingBox CRS="EPSG:22196" minx="6105929.364866447" miny="6283288.644614679" maxx="6210760.759533388" maxy="6432267.2449266175"/>
+        <BoundingBox CRS="EPSG:22174" minx="6095574.053187326" miny="4832315.345452001" maxx="6204773.299556798" maxy="4984405.418652456"/>
+        <BoundingBox CRS="EPSG:22175" minx="6105919.90651419" miny="5558950.691182136" maxx="6210607.698424818" maxy="5707828.255762862"/>
+        <BoundingBox CRS="EPSG:22176" minx="6105715.177959441" miny="6283240.859996387" maxx="6210546.694273687" maxy="6432219.649984083"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6607132.37417164" miny="-4187328.245672608" maxx="-6428037.598796268" maxy="-4062148.5366096133"/>
+        <Style>
+          <Name>curvas_de_nivel</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CurvasAreaMetropolitana"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>HidrografiaBuenosAires</Name>
+        <Title>Hidrografia Pcia de Buenos Aires</Title>
+        <Abstract>Hidrografia de la Provincia de Buenos Aires, digitalizada sobre las cartas IGN 1:250000</Abstract>
+        <KeywordList>
+          <Keyword>hidro_view</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-63.64958580598987</westBoundLongitude>
+          <eastBoundLongitude>-56.46195120253904</eastBoundLongitude>
+          <southBoundLatitude>-41.117541397841336</southBoundLatitude>
+          <northBoundLatitude>-33.19700539405238</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-63.64958580598987" miny="-41.117541397841336" maxx="-56.46195120253904" maxy="-33.19700539405238"/>
+        <BoundingBox CRS="EPSG:4326" minx="-41.11754145916356" miny="-63.64958584197658" maxx="-33.19700543909493" maxy="-56.4619512262597"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7085439.485131588" miny="-5029694.491923075" maxx="-6285315.659701878" maxy="-3921482.4301359346"/>
+        <BoundingBox CRS="EPSG:22184" minx="5427682.386843875" miny="4439428.86174202" maxx="6327234.590364514" maxy="5110173.261718688"/>
+        <BoundingBox CRS="EPSG:22185" minx="5441914.048392871" miny="5159601.61348547" maxx="6327367.1736113485" maxy="5829989.863177351"/>
+        <BoundingBox CRS="EPSG:22186" minx="5426969.65548066" miny="5879398.756865818" maxx="6327239.578179641" maxy="6550170.641152244"/>
+        <BoundingBox CRS="EPSG:22194" minx="5427893.65133751" miny="4439498.128239908" maxx="6327445.157235827" maxy="5110242.243654118"/>
+        <BoundingBox CRS="EPSG:22195" minx="5442127.577540306" miny="5159660.346117761" maxx="6327579.573037129" maxy="5830048.042063523"/>
+        <BoundingBox CRS="EPSG:22196" minx="5427184.971524194" miny="5879447.022300171" maxx="6327453.49518167" maxy="6550218.079858567"/>
+        <BoundingBox CRS="EPSG:22174" minx="5427682.38224775" miny="4439428.86176446" maxx="6327234.586721602" maxy="5110173.261491254"/>
+        <BoundingBox CRS="EPSG:22175" minx="5441914.043799615" miny="5159601.6136118155" maxx="6327367.1699685035" maxy="5829989.863054884"/>
+        <BoundingBox CRS="EPSG:22176" minx="5426969.650884393" miny="5879398.7570971865" maxx="6327239.574536731" maxy="6550170.641133657"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7085439.485131588" miny="-5029694.491923075" maxx="-6285315.659701878" maxy="-3921482.4301359346"/>
+        <Style>
+          <Name>Hidro</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=HidrografiaBuenosAires"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>HidrografiaDetalleConurbano</Name>
+        <Title>Hidrografia de detalle Conurbano BsAs</Title>
+        <Abstract>Hidrografia en detalle con base en el trabajo del Ente del Conurbano, con algunas correcciones. Sin nombres</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>hidro_detalle</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-58.885261891419766</westBoundLongitude>
+          <eastBoundLongitude>-57.71658331918279</eastBoundLongitude>
+          <southBoundLatitude>-35.05928217746151</southBoundLatitude>
+          <northBoundLatitude>-34.333122967476385</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-58.885261891419766" miny="-35.05928217746151" maxx="-57.71658331918279" maxy="-34.333122967476385"/>
+        <BoundingBox CRS="EPSG:4326" minx="-35.05928222774012" miny="-58.88526191484333" maxx="-34.333123016479725" maxy="-57.716583341242604"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6555077.371588904" miny="-4171940.283165509" maxx="-6424980.667874662" maxy="-4073620.4999391874"/>
+        <BoundingBox CRS="EPSG:22184" minx="6108003.69520314" miny="4875466.359544415" maxx="6193673.73434619" maxy="4986446.089178832"/>
+        <BoundingBox CRS="EPSG:22185" minx="6118410.783597636" miny="5601691.152476273" maxx="6200789.608389635" maxy="5710146.325495838"/>
+        <BoundingBox CRS="EPSG:22186" minx="6119170.2796614915" miny="6326501.82548841" maxx="6201119.902271051" maxy="6434631.047961473"/>
+        <BoundingBox CRS="EPSG:22194" minx="6108214.232288913" miny="4875535.354890457" maxx="6193884.271431661" maxy="4986515.053101951"/>
+        <BoundingBox CRS="EPSG:22195" minx="6118623.354200213" miny="5601749.494587512" maxx="6201002.114102492" maxy="5710204.5712115085"/>
+        <BoundingBox CRS="EPSG:22196" minx="6119384.452564299" miny="6326549.554327989" maxx="6201333.976454475" maxy="6434678.638512553"/>
+        <BoundingBox CRS="EPSG:22174" minx="6108003.691264666" miny="4875466.359382819" maxx="6193673.73051905" maxy="4986446.088980488"/>
+        <BoundingBox CRS="EPSG:22175" minx="6118410.779663893" miny="5601691.1524326" maxx="6200789.604565898" maxy="5710146.325410424"/>
+        <BoundingBox CRS="EPSG:22176" minx="6119170.275728095" miny="6326501.825558912" maxx="6201119.898447473" maxy="6434631.047989544"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6555077.371588904" miny="-4171940.283165509" maxx="-6424980.667874662" maxy="-4073620.4999391874"/>
+        <Style>
+          <Name>hidro_detalle</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=HidrografiaDetalleConurbano"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>LagosLagunasBuenosAires</Name>
+        <Title>Lagos y Lagunas Pcia. de Buenos Aires</Title>
+        <Abstract>Lagos y Lagunas Pcia. de Buenos Aires. Escala 1:250.000</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>lagunas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.17392988762619</westBoundLongitude>
+          <eastBoundLongitude>-55.173083947409765</eastBoundLongitude>
+          <southBoundLatitude>-41.14975791177379</southBoundLatitude>
+          <northBoundLatitude>-31.965626022324553</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.17392988762619" miny="-41.14975791177379" maxx="-55.173083947409765" maxy="-31.965626022324553"/>
+        <BoundingBox CRS="EPSG:4326" minx="-41.14975797288298" miny="-66.17392992733407" maxx="-31.965626064100853" maxy="-55.173083968741"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7366448.183300597" miny="-5034456.088641241" maxx="-6141839.612894773" maxy="-3758799.359182602"/>
+        <BoundingBox CRS="EPSG:22184" minx="5415119.474418074" miny="4199905.608139497" maxx="6463818.746437165" maxy="5240882.783325032"/>
+        <BoundingBox CRS="EPSG:22185" minx="5426343.736066832" miny="4915888.810772446" maxx="6463726.792371231" maxy="5956519.4199354695"/>
+        <BoundingBox CRS="EPSG:22186" minx="5403981.606855363" miny="5631166.806528493" maxx="6463924.882015519" maxy="6672708.369217158"/>
+        <BoundingBox CRS="EPSG:22194" minx="5415330.70726307" miny="4199974.909879083" maxx="6464029.276291228" maxy="5240951.831574154"/>
+        <BoundingBox CRS="EPSG:22195" minx="5426557.230380016" miny="4915947.658225178" maxx="6463939.09132656" maxy="5956577.572662402"/>
+        <BoundingBox CRS="EPSG:22196" minx="5404196.880533176" miny="5631215.274464948" maxx="6464138.652495811" maxy="6672755.6951482305"/>
+        <BoundingBox CRS="EPSG:22174" minx="5415119.469818137" miny="4199905.608239553" maxx="6463818.743001578" maxy="5240882.783076143"/>
+        <BoundingBox CRS="EPSG:22175" minx="5426343.731469087" miny="4915888.810968002" maxx="6463726.788935595" maxy="5956519.419782963"/>
+        <BoundingBox CRS="EPSG:22176" minx="5403981.602253305" miny="5631166.806821353" maxx="6463924.878579989" maxy="6672708.369159631"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7366448.183300597" miny="-5034456.088641241" maxx="-6141839.612894773" maxy="-3758799.359182602"/>
+        <Style>
+          <Name>Lagunas</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=LagosLagunasBuenosAires"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>LimpiezasCoopBsAs2015</Name>
+        <Title>Limpieza Arroyos Coop BsAs 2015</Title>
+        <Abstract>Limpiezas de arroyos realizadas por distintas cooperativas de trabajo en el año 2015.</Abstract>
+        <KeywordList>
+          <Keyword>LimpiezaCooperativas2015</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.1281849449792</westBoundLongitude>
+          <eastBoundLongitude>-57.4748604046839</eastBoundLongitude>
+          <southBoundLatitude>-35.284285488</southBoundLatitude>
+          <northBoundLatitude>-34.3223040282083</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.1281849449792" miny="-35.284285488" maxx="-57.4748604046839" maxy="-34.3223040282083"/>
+        <BoundingBox CRS="EPSG:4326" minx="-35.284285488" miny="-59.1281849449792" maxx="-34.3223040282083" maxy="-57.4748604046839"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6582119.439605589" miny="-4202581.831846521" maxx="-6398072.193663893" maxy="-4072162.1239422504"/>
+        <BoundingBox CRS="EPSG:22184" minx="6081801.623226602" miny="4852313.9919617465" maxx="6195755.81756403" maxy="5008791.843078927"/>
+        <BoundingBox CRS="EPSG:22185" minx="6092907.87386718" miny="5579311.1904179985" maxx="6202208.397238024" maxy="5732427.342181339"/>
+        <BoundingBox CRS="EPSG:22186" minx="6093755.632733432" miny="6304117.226899829" maxx="6202450.498502413" maxy="6456801.157893571"/>
+        <BoundingBox CRS="EPSG:22194" minx="6082012.167333368" miny="4852382.992737094" maxx="6195966.364076865" maxy="5008860.793009038"/>
+        <BoundingBox CRS="EPSG:22195" minx="6093120.4670488415" miny="5579369.554153603" maxx="6202420.904123842" maxy="5732485.566116947"/>
+        <BoundingBox CRS="EPSG:22196" minx="6093969.838080273" miny="6304164.985599842" maxx="6202664.572390539" maxy="6456848.7180825835"/>
+        <BoundingBox CRS="EPSG:22174" minx="6081801.6192549225" miny="4852313.991807598" maxx="6195755.813738974" maxy="5008791.842871571"/>
+        <BoundingBox CRS="EPSG:22175" minx="6092907.869900465" miny="5579311.190383364" maxx="6202208.393416057" maxy="5732427.342086933"/>
+        <BoundingBox CRS="EPSG:22176" minx="6093755.628767096" miny="6304117.22697937" maxx="6202450.494680562" maxy="6456801.157912434"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6582119.439605589" miny="-4202581.831846521" maxx="-6398072.193663893" maxy="-4072162.1239422504"/>
+        <Style>
+          <Name>limpiezas</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=LimpiezasCoopBsAs2015"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>obras_dpoh</Name>
+        <Title>Referencia Obras DPOH</Title>
+        <Abstract>Referencia puntual de Obras de la Direccion Provincial de Hidraulica (BsAs) segun base del Sistema de Gestion de Obras (SIGOS)</Abstract>
+        <KeywordList>
+          <Keyword>obras_sigos_ref</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-63.29262201147064</westBoundLongitude>
+          <eastBoundLongitude>-56.68607413479962</eastBoundLongitude>
+          <southBoundLatitude>-40.79198048247551</southBoundLatitude>
+          <northBoundLatitude>-33.306571049472</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-63.29262201147064" miny="-40.79198048247551" maxx="-56.68607413479962" maxy="-33.306571049472"/>
+        <BoundingBox CRS="EPSG:4326" minx="-40.79198048247551" miny="-63.29262201147064" maxx="-33.306571049472" maxy="-56.68607413479962"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7045702.453288049" miny="-4981707.08206992" maxx="-6310264.907755649" maxy="-3936067.199854423"/>
+        <BoundingBox CRS="EPSG:22184" minx="5465263.047553936" miny="4472748.450740016" maxx="6315178.53964652" maxy="5088482.958128877"/>
+        <BoundingBox CRS="EPSG:22185" minx="5479205.404568085" miny="5193294.943537045" maxx="6315216.7022682" maxy="5808690.374732733"/>
+        <BoundingBox CRS="EPSG:22186" minx="5465392.919166733" miny="5913505.831013714" maxx="6315172.772953548" maxy="6529235.560177712"/>
+        <BoundingBox CRS="EPSG:22194" minx="5465474.264826016" miny="4472817.705359897" maxx="6315389.112350209" maxy="5088551.942090107"/>
+        <BoundingBox CRS="EPSG:22195" minx="5479418.874278934" miny="5193353.652050605" maxx="6315429.111636684" maxy="5808748.566889223"/>
+        <BoundingBox CRS="EPSG:22196" minx="5465608.162122276" miny="5913554.059300526" maxx="6315386.705295577" maxy="6529283.022942979"/>
+        <BoundingBox CRS="EPSG:22174" minx="5465263.042979884" miny="4472748.450750205" maxx="6315178.5359857585" maxy="5088482.957907608"/>
+        <BoundingBox CRS="EPSG:22175" minx="5479205.399997072" miny="5193294.943651888" maxx="6315216.698607458" maxy="5808690.374617144"/>
+        <BoundingBox CRS="EPSG:22176" minx="5465392.914592709" miny="5913505.831234226" maxx="6315172.769292783" maxy="6529235.560166782"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7045702.453288049" miny="-4981707.08206992" maxx="-6310264.907755649" maxy="-3936067.199854423"/>
+        <Style>
+          <Name>obras</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=obras_dpoh"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

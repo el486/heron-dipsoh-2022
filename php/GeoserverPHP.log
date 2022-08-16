@@ -1,0 +1,19 @@
+*   Trying 10.46.3.14...
+* TCP_NODELAY set
+* Connected to www.mosp.gba.gov.ar (10.46.3.14) port 80 (#0)
+> GET /sig_hidraulica/ms/geoserver/dipsoh/gwc/service/wms?LAYERS=dipsoh%3Aparcelas_vista_2016&TRANSPARENT=TRUE&FORMAT=image%2Fpng&SINGLETILE=true&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG%3A900913&INFO_FORMAT=application%2Fvnd.ogc.gml&BBOX=-6976579.8061199,-4692423.6053256,-6975968.3098937,-4691812.1090994&WIDTH=256&HEIGHT=256 HTTP/1.1
+Host: www.mosp.gba.gov.ar
+Accept: */*
+
+< HTTP/1.1 404 Not Found
+< Date: Sun, 10 Jan 2021 00:05:00 GMT
+< Server: Apache/2.4.29 (Ubuntu)
+< Last-Modified: Wed, 04 Nov 2020 14:40:11 GMT
+< ETag: "5b-5b348f4e1a8c0"
+< Accept-Ranges: bytes
+< Content-Length: 91
+< Content-Type: text/html; charset=UTF-8
+< Via: 1.1 prodweb.mosp.gba.gov.ar
+< Vary: Accept-Encoding
+< 
+* Connection #0 to host www.mosp.gba.gov.ar left intact
