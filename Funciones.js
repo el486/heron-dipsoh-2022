@@ -1,4 +1,5 @@
 /*FUNCIONES GENERALES*/
+//Esta linea prueba git
 
 Ext.onReady(function() {  //carga después de terminar de cargar el mapa. Se usa para cargar las busquedas por url
 	var mapa = Heron.App.map;
