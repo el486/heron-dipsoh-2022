@@ -256,6 +256,24 @@ table.ext td {
     float: none;
     margin: 3px 2px;
 }
+.x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-ml, .x-btn-mr, .x-btn-mc, .x-btn-bl, .x-btn-br, .x-btn-bc {
+    background-image: url(../images/gray/button/btn.gif);
+}
+
+.olControlPanPanel div {
+    background-image: url(../images/default/panel/tool-sprites-gray.gif) !important;
+    /* background-image: url(../images/default/panel/tool-sprites-gray.gif) !important; */
+    height: 15px !important;
+    width: 15px !important;
+    font-size: 0 !important;
+}
+.olControlZoomPanel div {
+    background-image: url(../images/default/panel/tool-sprites-gray.gif) !important;
+    /* background-image: url(../images/default/panel/tool-sprites-gray.gif) !important; */
+    height: 15px !important;
+    width: 15px !important;
+    font-size: 0 !important;
+}
 
 
 
