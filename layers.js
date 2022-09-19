@@ -882,7 +882,7 @@ treeTheme[1].children.push({
 				});
 				
 audiovisual=[
-		new OpenLayers.Layer.WMS("Videos Helicoptero",wmsURL,
+		new OpenLayers.Layer.WMS("Videos Sobrevuelo",wmsURL,
 			{layers: 'dipsoh:vuelos_helicoptero_vista',transparent: true, format:'image/png', singleTile: true },
 			{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
@@ -892,7 +892,7 @@ audiovisual=[
 					}
 			}
 		),
-		new OpenLayers.Layer.WMS("Videos Drone",wmsURL,
+		new OpenLayers.Layer.WMS("Videos VANT",wmsURL,
 			{layers: 'dipsoh:vuelos_vista',transparent: true, format:'image/png', singleTile: true },
 			{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
@@ -912,8 +912,18 @@ audiovisual=[
 					}
 			}
 		),
-		new OpenLayers.Layer.WMS("Mapeos",wmsURL,
+		new OpenLayers.Layer.WMS("Ortomosaicos",wmsURL,
 			{layers: ['dipsoh:ortomosaicos_vista','dipsoh:ortomosaicos_raster'],transparent: true, format:'image/png', singleTile: true },
+			{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
+					wfs: {
+						protocol: 'fromWMSLayer',
+						downloadFormats:Heron.options.wfs.downloadFormats
+						}
+					}
+			}
+		),
+		new OpenLayers.Layer.WMS("Videos Tierra",wmsURL,
+			{layers: 'dipsoh:tierra_vista',transparent: true, format:'image/png', singleTile: true },
 			{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
 						protocol: 'fromWMSLayer',
@@ -927,10 +937,11 @@ layerItems=layerItems.concat(audiovisual);
 treeTheme[1].children.push({
 					text:'Registro audiovisual',expanded:false, children:
 						[
-							{nodeType: "gx_layer", layer: "Videos Drone"},
-							{nodeType: "gx_layer", layer: "Videos Helicoptero"},
+							{nodeType: "gx_layer", layer: "Videos VANT"},
+							{nodeType: "gx_layer", layer: "Videos Sobrevuelo"},
+							{nodeType: "gx_layer", layer: "Videos Tierra"},
 							{nodeType: "gx_layer", layer: "Fotos"},
-							{nodeType: "gx_layer", layer: "Mapeos"}
+							{nodeType: "gx_layer", layer: "Ortomosaicos"}
 						]
 				});				
 				
