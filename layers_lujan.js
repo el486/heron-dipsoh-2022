@@ -513,7 +513,7 @@ arba=[
 			}
 		),
 		layerParcelasArba = new OpenLayers.Layer.WMS("Parcelas",gwcURL,
-			{layers: 'dipsoh:parcelas_vista',transparent: true, format:'image/png', singleTile: true },
+			{layers: 'dipsoh:parcelas_vista_arba_2023',transparent: true, format:'image/png', singleTile: true },
 			{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
 						protocol: 'fromWMSLayer',
@@ -523,7 +523,7 @@ arba=[
 			}
 		),
 		layerMacizosArba = new OpenLayers.Layer.WMS("Macizos",gwcURL,
-			{layers: 'dipsoh:macizos_vista',transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
+			{layers: 'dipsoh:macizos_vista_arba_2023',transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
 						protocol: 'fromWMSLayer',
 						downloadFormats:Heron.options.wfs.downloadFormats
@@ -532,7 +532,7 @@ arba=[
 			}
 		),
 		layerCircunscripcionesArba = new OpenLayers.Layer.WMS("Partidos y Circunscripciones",gwcURL,
-			{layers: ['dipsoh:secciones_vista','dipsoh:circunscripciones_vista','dipsoh:partidos_vista'],transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
+			{layers: ['dipsoh:secciones_vista_arba_2023','dipsoh:circunscripciones_vista_arba_2023','dipsoh:partidos_vista'],transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
 						protocol: 'fromWMSLayer',
 						downloadFormats:Heron.options.wfs.downloadFormats
@@ -544,7 +544,7 @@ arba=[
 	
 layerItems=layerItems.concat(arba);
 treeTheme[1].children.push({
-					text:'Parcelario Arba 2018', nodeType: 'hr_cascader', expanded: false, children:
+					text:'Parcelario Arba 2023', nodeType: 'hr_cascader', expanded: false, children:
 						[
 							{nodeType: "gx_layer", layer: "Partidos y Circunscripciones" },
 							{nodeType: "gx_layer", layer: "Macizos" },

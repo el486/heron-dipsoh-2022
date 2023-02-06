@@ -318,8 +318,28 @@ treeTheme[1].children.push({
 		 * Layers nuestros: ARBA
 		 */
 arba=[
-		 layerCircunscripcionesArba = new OpenLayers.Layer.WMS("Partidos y Circunscripciones",gwcURL,
-			{layers: ['dipsoh:secciones_vista','dipsoh:circunscripciones_vista','dipsoh:partidos_vista'],transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
+		new OpenLayers.Layer.WMS("Parcelas ARBA online","http://geo.arba.gov.ar/geoserver/idera/wfs",
+			{layers: ['idera:Parcela'],transparent: true, format:'image/png', singleTile: true },{visibility: false, opacity:0.5, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
+					wfs: {
+						protocol: 'fromWMSLayer',
+						downloadFormats:Heron.options.wfs.downloadFormats
+						}
+					}
+			}
+		),
+
+		new OpenLayers.Layer.WMS("Manzanas ARBA online","http://geo.arba.gov.ar/geoserver/idera/wfs",
+			{layers: ['idera:Manzana'],transparent: true, format:'image/png', singleTile: true },{visibility: false, opacity:0.5, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
+					wfs: {
+						protocol: 'fromWMSLayer',
+						downloadFormats:Heron.options.wfs.downloadFormats
+						}
+					}
+			}
+		),	
+		
+		layerCircunscripcionesArba = new OpenLayers.Layer.WMS("Partidos y Circunscripciones",gwcURL,
+			{layers: ['dipsoh:secciones_vista_arba_2023','dipsoh:circunscripciones_vista_arba_2023','dipsoh:partidos_vista'],transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
 						protocol: 'fromWMSLayer',
 						downloadFormats:Heron.options.wfs.downloadFormats
@@ -328,7 +348,7 @@ arba=[
 			}
 		),		
 		layerMacizosArba = new OpenLayers.Layer.WMS("Macizos",gwcURL,
-			{layers: 'dipsoh:macizos_geoinfra_vista',transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
+			{layers: 'dipsoh:manzanas_vista_arba_2023',transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
 						protocol: 'fromWMSLayer',
 						downloadFormats:Heron.options.wfs.downloadFormats
@@ -337,7 +357,7 @@ arba=[
 			}
 		),
 		layerParcelasArba = new OpenLayers.Layer.WMS("Parcelas",gwcURL,
-			{layers: 'dipsoh:parcelas_geoinfra_vista',transparent: true, format:'image/png', singleTile: true },
+			{layers: 'dipsoh:parcelas_vista_arba_2023',transparent: true, format:'image/png', singleTile: true },
 			{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
 						protocol: 'fromWMSLayer',
@@ -346,7 +366,7 @@ arba=[
 					}
 			}
 		),
-		layerCallesArba = new OpenLayers.Layer.WMS("Calles",gwcURL,
+		layerCallesArba = new OpenLayers.Layer.WMS("Calles arba(2018)",gwcURL,
 			{layers: 'dipsoh:calles',transparent: true, format:'image/png', singleTile: true },
 			{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
@@ -356,7 +376,7 @@ arba=[
 					}
 			}
 		),
-		layerBarriosCerradosArba = new OpenLayers.Layer.WMS("Urbanizaciones Cerradas",gwcURL,
+		layerBarriosCerradosArba = new OpenLayers.Layer.WMS("Urbanizaciones Cerradas arba(2018)",gwcURL,
 			{layers: ['dipsoh:urbanizaciones_cerradas'],transparent: true, format:'image/png', singleTile: true },{visibility: false, displayInLayerSwitcher:false, featureInfoFormat: 'application/vnd.ogc.gml',metadata: {
 					wfs: {
 						protocol: 'fromWMSLayer',
@@ -389,9 +409,10 @@ treeTheme[1].children.push({
 							{nodeType: "gx_layer", layer: "Partidos y Circunscripciones" },
 							{nodeType: "gx_layer", layer: "Macizos" },
 							{nodeType: "gx_layer", layer: "Parcelas" },
-							{nodeType: "gx_layer", layer: "Calles" },
-							{nodeType: "gx_layer", layer: "Urbanizaciones Cerradas" }//,
-							//{nodeType: "gx_layer", layer: "Parcelas arba con plano" }
+							{nodeType: "gx_layer", layer: "Calles arba(2018)" },
+							{nodeType: "gx_layer", layer: "Urbanizaciones Cerradas arba(2018)" },
+							{nodeType: "gx_layer", layer: "Parcelas ARBA online" },
+							{nodeType: "gx_layer", layer: "Manzanas ARBA online" }
 						]
 				});
 

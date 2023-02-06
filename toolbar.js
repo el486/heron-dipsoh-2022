@@ -211,7 +211,7 @@ var gridCellRenderers=[
    }
 },
 {
-   featureType: 'parcelas_geoinfra_vista',
+   featureType: 'parcelas_vista_arba_2023',
    attrName: 'plano',
    renderer: {
 		   fn : function(value, metaData, record, rowIndex, colIndex, store) {
@@ -220,7 +220,7 @@ var gridCellRenderers=[
    }
 },
 {
-   featureType: 'parcelas_geoinfra_vista',
+   featureType: 'parcelas_vista_arba_2023',
    attrName: 'nomencla',
    renderer: {
 			fn : function(value, metaData, record, rowIndex, colIndex, store) { //funcion para convertir nomencla en human friendly
@@ -296,7 +296,7 @@ var gridCellRenderers=[
    }
 },*/
 {
-   featureType: 'parcelas_vista',
+   featureType: 'parcelas_vista_arba_2023',
    attrName: 'nomencla',
    renderer: {
 			fn : function(value, metaData, record, rowIndex, colIndex, store) {
@@ -572,7 +572,7 @@ var toolBarItems=[
 											version: "1.1.0"
 											,srsName: "EPSG:900913"
 											,url: serverURL+"/geoserver/dipsoh/wms"
-											,featureType: "parcelas_geoinfra"
+											,featureType: "parcelas_vista_arba_2023"
 											,featurePrefix: "dipsoh"
 											,featureNS : serverURL+"/geoserver/dipsoh_postgis"
 										}),
@@ -661,7 +661,7 @@ var toolBarItems=[
 											version: "1.1.0"
 											,srsName: "EPSG:900913"
 											,url: serverURL+"/geoserver/dipsoh/wms"
-											,featureType: "parcelas_geoinfra_vista"
+											,featureType: "parcelas_vista_arba_2023"
 											,featurePrefix: "dipsoh"
 											,featureNS : serverURL+"/geoserver/dipsoh_postgis"
 										}),
